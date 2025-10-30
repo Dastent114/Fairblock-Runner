@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fairblock Runner</title>
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Fairblock Runner</h1>
+        <div class="player-info">
+            <div class="player-name">Player: <span id="playerName">Guest</span></div>
+        </div>
+        <div class="score-container">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="high-score">High Score: <span id="highScore">0</span></div>
+        </div>
+        <div class="sound-controls">
+            <button id="soundToggle" class="sound-btn" title="Toggle Sound">🔊</button>
+            <button id="musicToggle" class="sound-btn" title="Toggle Music">🎵</button>
+        </div>
+        <canvas id="gameCanvas" width="1000" height="500"></canvas>
+        <div class="instructions">
+            <p><strong>PC:</strong> SPACEBAR or ARROW UP to jump</p>
+            <p><strong>Mobile:</strong> Tap the screen to jump</p>
+            <p>Press SPACEBAR or tap the screen to start the game</p>
+        </div>
+        <div id="gameOver" class="game-over hidden">
+            <h2>Game Over!</h2>
+            <p>Your Score: <span id="finalScore">0</span></p>
+            <button id="restartBtn">Play Again</button>
+        </div>
+        <div id="nicknameModal" class="modal">
+            <div class="modal-content">
+                <h2>Welcome to Fairblock Runner!</h2>
+                <p>Please enter your nickname:</p>
+                <input type="text" id="nicknameInput" placeholder="Enter your nickname" maxlength="20">
+                <button id="nicknameBtn">Start Playing</button>
+            </div>
+        </div>
+    </div>
+    <script src="sound.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
+
